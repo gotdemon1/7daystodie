@@ -36,7 +36,9 @@ services:
       - ./ServerFiles:/home/sdtdserver/serverfiles/ # Optional - serverfiles folder
       - ./log:/home/sdtdserver/log/ # Optional - Logs folder
       - ./backups:/home/sdtdserver/lgsm/backup/ # Optional - If BACKUP=NO, backups folder
-      - ./user.sh:/home/sdtdserver/user.sh
+      - ./install.sh:/home/sdtdserver/install.sh
+      - ./crontab:/home/sdtdserver/scripts/crontab
+      - ./sdtdserver.xml:/home/sdtdserver/serverfiles/sdtdserver.xml
     ports:
       - 26900:26900/tcp # Default game ports
       - 26900:26900/udp # Default game ports
